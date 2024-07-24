@@ -1,0 +1,1012 @@
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 56 | SCRIPTS: 20 | MODULES: 0 \\ --
+
+local UI = {}
+
+-- // StarterGui.Script Hub \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"]["Name"] = [[Script Hub]]
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+
+-- // StarterGui.Script Hub.Frame \\ --
+UI["2"] = Instance.new("Frame", UI["1"])
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2"]["Size"] = UDim2.new(0, 482, 0, 283)
+UI["2"]["Position"] = UDim2.new(0.24699, 0, 0.21169, 0)
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Script Hub.Frame.MainTab \\ --
+UI["3"] = Instance.new("Frame", UI["2"])
+UI["3"]["Visible"] = false
+UI["3"]["BorderSizePixel"] = 5
+UI["3"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["3"]["Size"] = UDim2.new(0, 477, 0, 277)
+UI["3"]["Position"] = UDim2.new(0.02661, 0, 0.00273, 0)
+UI["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3"]["Name"] = [[MainTab]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Inf Jump \\ --
+UI["4"] = Instance.new("TextButton", UI["3"])
+UI["4"]["TextWrapped"] = true
+UI["4"]["BorderSizePixel"] = 2
+UI["4"]["TextSize"] = 20
+UI["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["4"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["4"]["Name"] = [[Inf Jump]]
+UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4"]["Text"] = [[Inf Jump]]
+UI["4"]["Position"] = UDim2.new(-0.00037, 0, -0.00138, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Inf Jump.InfJump Toggle \\ --
+UI["5"] = Instance.new("LocalScript", UI["4"])
+UI["5"]["Name"] = [[InfJump Toggle]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Fly \\ --
+UI["6"] = Instance.new("TextButton", UI["3"])
+UI["6"]["TextWrapped"] = true
+UI["6"]["BorderSizePixel"] = 2
+UI["6"]["TextSize"] = 20
+UI["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["6"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["6"]["Name"] = [[Fly]]
+UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6"]["Text"] = [[Fly]]
+UI["6"]["Position"] = UDim2.new(0.78489, 0, -0.00088, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Fly.Fly Toggle \\ --
+UI["7"] = Instance.new("LocalScript", UI["6"])
+UI["7"]["Name"] = [[Fly Toggle]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.MainComs \\ --
+UI["8"] = Instance.new("TextLabel", UI["3"])
+UI["8"]["BorderSizePixel"] = 0
+UI["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["8"]["TextSize"] = 25
+UI["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8"]["BackgroundTransparency"] = 1
+UI["8"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8"]["Text"] = [[MAIN COMMANDS]]
+UI["8"]["Name"] = [[MainComs]]
+UI["8"]["Position"] = UDim2.new(0.28512, 0, 0, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Dex \\ --
+UI["9"] = Instance.new("TextButton", UI["3"])
+UI["9"]["TextWrapped"] = true
+UI["9"]["BorderSizePixel"] = 2
+UI["9"]["TextSize"] = 15
+UI["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["9"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["9"]["Name"] = [[Dex]]
+UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["9"]["Text"] = [[Dex Explorer]]
+UI["9"]["Position"] = UDim2.new(-0.00127, 0, 0.18684, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Dex.DexOpen \\ --
+UI["a"] = Instance.new("LocalScript", UI["9"])
+UI["a"]["Name"] = [[DexOpen]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.ID Board \\ --
+UI["b"] = Instance.new("TextButton", UI["3"])
+UI["b"]["TextWrapped"] = true
+UI["b"]["BorderSizePixel"] = 2
+UI["b"]["TextSize"] = 20
+UI["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["b"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["b"]["Name"] = [[ID Board]]
+UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["b"]["Text"] = [[ID Board]]
+UI["b"]["Position"] = UDim2.new(-0.00127, 0, 0.87277, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.ID Board.ID Board TP \\ --
+UI["c"] = Instance.new("LocalScript", UI["b"])
+UI["c"]["Name"] = [[ID Board TP]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.F3X \\ --
+UI["d"] = Instance.new("TextButton", UI["3"])
+UI["d"]["TextWrapped"] = true
+UI["d"]["BorderSizePixel"] = 2
+UI["d"]["TextSize"] = 20
+UI["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["d"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["d"]["Name"] = [[F3X]]
+UI["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["d"]["Text"] = [[F3X]]
+UI["d"]["Position"] = UDim2.new(0.78489, 0, 0.87277, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.F3X.F3X TP \\ --
+UI["e"] = Instance.new("LocalScript", UI["d"])
+UI["e"]["Name"] = [[F3X TP]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Teleports \\ --
+UI["f"] = Instance.new("TextLabel", UI["3"])
+UI["f"]["BorderSizePixel"] = 0
+UI["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["f"]["TextSize"] = 25
+UI["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["f"]["BackgroundTransparency"] = 1
+UI["f"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["f"]["Text"] = [[TELEPORTS]]
+UI["f"]["Name"] = [[Teleports]]
+UI["f"]["Position"] = UDim2.new(0.28512, 0, 0.66065, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Loadout Board \\ --
+UI["10"] = Instance.new("TextButton", UI["3"])
+UI["10"]["TextWrapped"] = true
+UI["10"]["BorderSizePixel"] = 2
+UI["10"]["TextSize"] = 15
+UI["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["10"]["Size"] = UDim2.new(0, 104, 0, 35)
+UI["10"]["Name"] = [[Loadout Board]]
+UI["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["10"]["Text"] = [[Loadout Board]]
+UI["10"]["Position"] = UDim2.new(0.52493, 0, 0.87277, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Loadout Board.Loadout Board TP \\ --
+UI["11"] = Instance.new("LocalScript", UI["10"])
+UI["11"]["Name"] = [[Loadout Board TP]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.WalkSpeed \\ --
+UI["12"] = Instance.new("TextLabel", UI["3"])
+UI["12"]["BorderSizePixel"] = 0
+UI["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12"]["TextSize"] = 25
+UI["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12"]["BackgroundTransparency"] = 1
+UI["12"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12"]["Text"] = [[WALKSPEED]]
+UI["12"]["Name"] = [[WalkSpeed]]
+UI["12"]["Position"] = UDim2.new(0.28512, 0, 0.33935, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.16 \\ --
+UI["13"] = Instance.new("TextButton", UI["3"])
+UI["13"]["TextWrapped"] = true
+UI["13"]["BorderSizePixel"] = 2
+UI["13"]["TextSize"] = 20
+UI["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["13"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["13"]["Name"] = [[16]]
+UI["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13"]["Text"] = [[16]]
+UI["13"]["Position"] = UDim2.new(-0.00127, 0, 0.48983, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.16.16Speed \\ --
+UI["14"] = Instance.new("LocalScript", UI["13"])
+UI["14"]["Name"] = [[16Speed]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.30 \\ --
+UI["15"] = Instance.new("TextButton", UI["3"])
+UI["15"]["TextWrapped"] = true
+UI["15"]["BorderSizePixel"] = 2
+UI["15"]["TextSize"] = 20
+UI["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["15"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["15"]["Name"] = [[30]]
+UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15"]["Text"] = [[30]]
+UI["15"]["Position"] = UDim2.new(0.21257, 0, 0.48983, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.30.30Speed \\ --
+UI["16"] = Instance.new("LocalScript", UI["15"])
+UI["16"]["Name"] = [[30Speed]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.300 \\ --
+UI["17"] = Instance.new("TextButton", UI["3"])
+UI["17"]["TextWrapped"] = true
+UI["17"]["BorderSizePixel"] = 2
+UI["17"]["TextSize"] = 20
+UI["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["17"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["17"]["Name"] = [[300]]
+UI["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["17"]["Text"] = [[300]]
+UI["17"]["Position"] = UDim2.new(0.92505, 0, 0.48983, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.300.300Speed \\ --
+UI["18"] = Instance.new("LocalScript", UI["17"])
+UI["18"]["Name"] = [[300Speed]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.60 \\ --
+UI["19"] = Instance.new("TextButton", UI["3"])
+UI["19"]["TextWrapped"] = true
+UI["19"]["BorderSizePixel"] = 2
+UI["19"]["TextSize"] = 20
+UI["19"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["19"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["19"]["Name"] = [[60]]
+UI["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["19"]["Text"] = [[60]]
+UI["19"]["Position"] = UDim2.new(0.45665, 0, 0.48983, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.60.60Speed \\ --
+UI["1a"] = Instance.new("LocalScript", UI["19"])
+UI["1a"]["Name"] = [[60Speed]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.100 \\ --
+UI["1b"] = Instance.new("TextButton", UI["3"])
+UI["1b"]["TextWrapped"] = true
+UI["1b"]["BorderSizePixel"] = 2
+UI["1b"]["TextSize"] = 20
+UI["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1b"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["1b"]["Name"] = [[100]]
+UI["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1b"]["Text"] = [[100]]
+UI["1b"]["Position"] = UDim2.new(0.71002, 0, 0.48983, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.100.100Speed \\ --
+UI["1c"] = Instance.new("LocalScript", UI["1b"])
+UI["1c"]["Name"] = [[100Speed]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Building Tools \\ --
+UI["1d"] = Instance.new("TextButton", UI["3"])
+UI["1d"]["TextWrapped"] = true
+UI["1d"]["BorderSizePixel"] = 2
+UI["1d"]["TextSize"] = 15
+UI["1d"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1d"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["1d"]["Name"] = [[Building Tools]]
+UI["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1d"]["Text"] = [[Building Tools]]
+UI["1d"]["Position"] = UDim2.new(0.25659, 0, 0.87277, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Building Tools.Building Tools TP \\ --
+UI["1e"] = Instance.new("LocalScript", UI["1d"])
+UI["1e"]["Name"] = [[Building Tools TP]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Event Spy \\ --
+UI["1f"] = Instance.new("TextButton", UI["3"])
+UI["1f"]["TextWrapped"] = true
+UI["1f"]["BorderSizePixel"] = 2
+UI["1f"]["TextSize"] = 15
+UI["1f"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1f"]["Size"] = UDim2.new(0, 102, 0, 35)
+UI["1f"]["Name"] = [[Event Spy]]
+UI["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1f"]["Text"] = [[Event Spy]]
+UI["1f"]["Position"] = UDim2.new(0.7828, 0, 0.18684, 0)
+
+-- // StarterGui.Script Hub.Frame.MainTab.Event Spy.SpyOpen \\ --
+UI["20"] = Instance.new("LocalScript", UI["1f"])
+UI["20"]["Name"] = [[SpyOpen]]
+
+-- // StarterGui.Script Hub.Frame.DragScript \\ --
+UI["21"] = Instance.new("LocalScript", UI["2"])
+UI["21"]["Name"] = [[DragScript]]
+
+-- // StarterGui.Script Hub.Frame.KickTab \\ --
+UI["22"] = Instance.new("Frame", UI["2"])
+UI["22"]["Visible"] = false
+UI["22"]["BorderSizePixel"] = 5
+UI["22"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["22"]["Size"] = UDim2.new(0, 477, 0, 277)
+UI["22"]["Position"] = UDim2.new(0.02661, 0, 0.00273, 0)
+UI["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["22"]["Name"] = [[KickTab]]
+
+-- // StarterGui.Script Hub.Frame.KickTab.KickComs \\ --
+UI["23"] = Instance.new("TextLabel", UI["22"])
+UI["23"]["BorderSizePixel"] = 0
+UI["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["23"]["TextSize"] = 25
+UI["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["23"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["23"]["BackgroundTransparency"] = 1
+UI["23"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["23"]["Text"] = [[KICK COMMANDS]]
+UI["23"]["Name"] = [[KickComs]]
+UI["23"]["Position"] = UDim2.new(0.28512, 0, 0, 0)
+
+-- // StarterGui.Script Hub.Frame.DemoTab \\ --
+UI["24"] = Instance.new("Frame", UI["2"])
+UI["24"]["Visible"] = false
+UI["24"]["BorderSizePixel"] = 5
+UI["24"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["24"]["Size"] = UDim2.new(0, 477, 0, 277)
+UI["24"]["Position"] = UDim2.new(0.02661, 0, 0.00273, 0)
+UI["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["24"]["Name"] = [[DemoTab]]
+
+-- // StarterGui.Script Hub.Frame.DemoTab.DemoComs \\ --
+UI["25"] = Instance.new("TextLabel", UI["24"])
+UI["25"]["BorderSizePixel"] = 0
+UI["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["25"]["TextSize"] = 25
+UI["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["25"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["25"]["BackgroundTransparency"] = 1
+UI["25"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["25"]["Text"] = [[DEMO COMMANDS]]
+UI["25"]["Name"] = [[DemoComs]]
+UI["25"]["Position"] = UDim2.new(0.28512, 0, 0, 0)
+
+-- // StarterGui.Script Hub.Frame.Tab Icons \\ --
+UI["26"] = Instance.new("Frame", UI["2"])
+UI["26"]["BorderSizePixel"] = 0
+UI["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["26"]["Size"] = UDim2.new(0, 81, 0, 279)
+UI["26"]["Position"] = UDim2.new(-0.16876, 0, 0.00138, 0)
+UI["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["26"]["Name"] = [[Tab Icons]]
+UI["26"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs \\ --
+UI["27"] = Instance.new("Frame", UI["26"])
+UI["27"]["BorderSizePixel"] = 0
+UI["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["27"]["Size"] = UDim2.new(0, 100, 0, 278)
+UI["27"]["Position"] = UDim2.new(-0.21174, 0, -0.00361, 0)
+UI["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["27"]["Name"] = [[Tabs]]
+UI["27"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.DestroyButton \\ --
+UI["28"] = Instance.new("TextButton", UI["27"])
+UI["28"]["TextWrapped"] = true
+UI["28"]["BorderSizePixel"] = 10
+UI["28"]["TextSize"] = 20
+UI["28"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["28"]["Size"] = UDim2.new(0, 43, 0, 35)
+UI["28"]["Name"] = [[DestroyButton]]
+UI["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["28"]["Text"] = [[DEM0]]
+UI["28"]["Position"] = UDim2.new(0.43344, 0, 0.8588, 0)
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.DestroyButton.DemoOpen \\ --
+UI["29"] = Instance.new("LocalScript", UI["28"])
+UI["29"]["Name"] = [[DemoOpen]]
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.KickButton \\ --
+UI["2a"] = Instance.new("TextButton", UI["27"])
+UI["2a"]["TextWrapped"] = true
+UI["2a"]["BorderSizePixel"] = 10
+UI["2a"]["TextSize"] = 20
+UI["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2a"]["Size"] = UDim2.new(0, 43, 0, 35)
+UI["2a"]["Name"] = [[KickButton]]
+UI["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2a"]["Text"] = [[KICK]]
+UI["2a"]["Position"] = UDim2.new(0.43344, 0, 0.58316, 0)
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.KickButton.KickOpen \\ --
+UI["2b"] = Instance.new("LocalScript", UI["2a"])
+UI["2b"]["Name"] = [[KickOpen]]
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.MainButton \\ --
+UI["2c"] = Instance.new("TextButton", UI["27"])
+UI["2c"]["TextWrapped"] = true
+UI["2c"]["BorderSizePixel"] = 10
+UI["2c"]["TextSize"] = 20
+UI["2c"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2c"]["Size"] = UDim2.new(0, 43, 0, 35)
+UI["2c"]["Name"] = [[MainButton]]
+UI["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2c"]["Text"] = [[MAIN]]
+UI["2c"]["Position"] = UDim2.new(0.43344, 0, 0.30924, 0)
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.MainButton.MainOpen \\ --
+UI["2d"] = Instance.new("LocalScript", UI["2c"])
+UI["2d"]["Name"] = [[MainOpen]]
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.LogButton \\ --
+UI["2e"] = Instance.new("TextButton", UI["27"])
+UI["2e"]["TextWrapped"] = true
+UI["2e"]["BorderSizePixel"] = 10
+UI["2e"]["TextSize"] = 12
+UI["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2e"]["Size"] = UDim2.new(0, 43, 0, 35)
+UI["2e"]["Name"] = [[LogButton]]
+UI["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2e"]["Text"] = [[UPDATE LOG]]
+UI["2e"]["Position"] = UDim2.new(0.42998, 0, 0.01928, 0)
+
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.LogButton.LogOpen \\ --
+UI["2f"] = Instance.new("LocalScript", UI["2e"])
+UI["2f"]["Name"] = [[LogOpen]]
+
+-- // StarterGui.Script Hub.Frame.LogTab \\ --
+UI["30"] = Instance.new("Frame", UI["2"])
+UI["30"]["BorderSizePixel"] = 5
+UI["30"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["30"]["Size"] = UDim2.new(0, 477, 0, 277)
+UI["30"]["Position"] = UDim2.new(0.02661, 0, 0.00273, 0)
+UI["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["30"]["Name"] = [[LogTab]]
+
+-- // StarterGui.Script Hub.Frame.LogTab.UpdateLog \\ --
+UI["31"] = Instance.new("TextLabel", UI["30"])
+UI["31"]["BorderSizePixel"] = 0
+UI["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["31"]["TextSize"] = 25
+UI["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["31"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["31"]["BackgroundTransparency"] = 1
+UI["31"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["31"]["Text"] = [[UPDATE LOG]]
+UI["31"]["Name"] = [[UpdateLog]]
+UI["31"]["Position"] = UDim2.new(0.28512, 0, 0, 0)
+
+-- // StarterGui.Script Hub.Frame.LogTab.Updates \\ --
+UI["32"] = Instance.new("TextLabel", UI["30"])
+UI["32"]["BorderSizePixel"] = 0
+UI["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["32"]["TextSize"] = 25
+UI["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["32"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["32"]["BackgroundTransparency"] = 1
+UI["32"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["32"]["Text"] = [[UPDATES]]
+UI["32"]["Name"] = [[Updates]]
+UI["32"]["Position"] = UDim2.new(0, 0, 0.18051, 0)
+
+-- // StarterGui.Script Hub.Frame.LogTab.PreviousUpdate \\ --
+UI["33"] = Instance.new("TextLabel", UI["30"])
+UI["33"]["BorderSizePixel"] = 0
+UI["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["33"]["TextSize"] = 25
+UI["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["33"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["33"]["BackgroundTransparency"] = 1
+UI["33"]["Size"] = UDim2.new(0, 200, 0, 50)
+UI["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["33"]["Text"] = [[PREVIOUS UPDATES]]
+UI["33"]["Name"] = [[PreviousUpdate]]
+UI["33"]["Position"] = UDim2.new(0.58071, 0, 0.18051, 0)
+
+-- // StarterGui.Script Hub.Frame.LogTab.UpdatedContents \\ --
+UI["34"] = Instance.new("TextLabel", UI["30"])
+UI["34"]["TextWrapped"] = true
+UI["34"]["BorderSizePixel"] = 0
+UI["34"]["TextScaled"] = true
+UI["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["34"]["TextSize"] = 15
+UI["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["34"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["34"]["BackgroundTransparency"] = 1
+UI["34"]["Size"] = UDim2.new(0, 200, 0, 177)
+UI["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["34"]["Text"] = [[Main Tab, Kick Tab, Demo Tab, and Log Tab. Main Tab: Fly Button, Infinite Jump Button, Dex Explorer Button, Remote Spy Button, WalkSpeed Changer, and Teleport Buttons. Kick Tab: Nothing Demo Tab: Nothing. Log Tab: Update Log Contents ]]
+UI["34"]["Name"] = [[UpdatedContents]]
+UI["34"]["Position"] = UDim2.new(0, 0, 0.36101, 0)
+
+-- // StarterGui.Script Hub.Frame.LogTab.Prev. UpdateThings \\ --
+UI["35"] = Instance.new("TextLabel", UI["30"])
+UI["35"]["TextWrapped"] = true
+UI["35"]["BorderSizePixel"] = 0
+UI["35"]["TextScaled"] = true
+UI["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["35"]["TextSize"] = 15
+UI["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["BackgroundTransparency"] = 1
+UI["35"]["Size"] = UDim2.new(0, 200, 0, 177)
+UI["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["Text"] = [[Nothing Yet!]]
+UI["35"]["Name"] = [[Prev. UpdateThings]]
+UI["35"]["Position"] = UDim2.new(0.58071, 0, 0.36101, 0)
+
+-- // StarterGui.Script Hub.Welcome Script \\ --
+UI["36"] = Instance.new("LocalScript", UI["1"])
+UI["36"]["Name"] = [[Welcome Script]]
+
+-- // StarterGui.Script Hub.TextButton \\ --
+UI["37"] = Instance.new("TextButton", UI["1"])
+UI["37"]["BorderSizePixel"] = 5
+UI["37"]["TextSize"] = 20
+UI["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["37"]["Size"] = UDim2.new(0, 50, 0, 50)
+UI["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["37"]["Text"] = [[CLOSE]]
+UI["37"]["Position"] = UDim2.new(0.48414, 0, 0, 0)
+
+-- // StarterGui.Script Hub.TextButton.Open and Close \\ --
+UI["38"] = Instance.new("LocalScript", UI["37"])
+UI["38"]["Name"] = [[Open and Close]]
+
+-- // StarterGui.Script Hub.Frame.MainTab.Inf Jump.InfJump Toggle \\ --
+local function SCRIPT_5()
+local script = UI["5"]
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local infiniteJumpEnabled = false
+	
+	local function onCharacterAdded(char)
+		character = char
+		humanoid = character:WaitForChild("Humanoid")
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	
+	local function toggleInfiniteJump()
+		infiniteJumpEnabled = not infiniteJumpEnabled
+		if infiniteJumpEnabled then
+			game.StarterGui:SetCore("SendNotification", {Title="Infinite Jump"; Text="Press button to toggle!"; Duration=8;}
+			)
+		else
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleInfiniteJump)
+	
+	local userInput = game:GetService("UserInputService")
+	
+	userInput.JumpRequest:Connect(function()
+		if infiniteJumpEnabled then
+			if humanoid and humanoid:GetState() == Enum.HumanoidStateType.Freefall then
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end
+	end)
+end
+task.spawn(SCRIPT_5)
+-- // StarterGui.Script Hub.Frame.MainTab.Fly.Fly Toggle \\ --
+local function SCRIPT_7()
+local script = UI["7"]
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local flying = false
+	local flySpeed = 100
+	local bodyVelocity
+	local bodyGyro
+	
+	local function startFlying()
+		flying = true
+		bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+		bodyVelocity.MaxForce = Vector3.new(100000, 100000, 100000)
+		bodyVelocity.P = 1000
+		bodyVelocity.Parent = character.HumanoidRootPart
+	
+		bodyGyro = Instance.new("BodyGyro")
+		bodyGyro.CFrame = character.HumanoidRootPart.CFrame
+		bodyGyro.MaxTorque = Vector3.new(100000, 100000, 100000)
+		bodyGyro.P = 9000
+		bodyGyro.D = 500
+		bodyGyro.Parent = character.HumanoidRootPart
+	
+		humanoid.PlatformStand = true
+	end
+	
+	local function stopFlying()
+		flying = false
+		if bodyVelocity then bodyVelocity:Destroy() end
+		if bodyGyro then bodyGyro:Destroy() end
+		humanoid.PlatformStand = false
+	end
+	
+	local function toggleFly()
+		if flying then
+			stopFlying()
+		else
+			startFlying()
+			game.StarterGui:SetCore("SendNotification", {Title="Flying"; Text="Press button to toggle!"; Duration=8;}
+			)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleFly)
+	
+	local userInput = game:GetService("UserInputService")
+	local runService = game:GetService("RunService")
+	
+	local function updateFlyDirection()
+		if not flying then return end
+		local camera = workspace.CurrentCamera
+		local moveDirection = Vector3.new(0, 0, 0)
+	
+		if userInput:IsKeyDown(Enum.KeyCode.W) then
+			moveDirection = moveDirection + camera.CFrame.LookVector
+		end
+		if userInput:IsKeyDown(Enum.KeyCode.S) then
+			moveDirection = moveDirection - camera.CFrame.LookVector
+		end
+		if userInput:IsKeyDown(Enum.KeyCode.A) then
+			moveDirection = moveDirection - camera.CFrame.RightVector
+		end
+		if userInput:IsKeyDown(Enum.KeyCode.D) then
+			moveDirection = moveDirection + camera.CFrame.RightVector
+		end
+	
+		if moveDirection.Magnitude > 0 then
+			moveDirection = moveDirection.Unit
+			bodyVelocity.Velocity = moveDirection * flySpeed
+	
+			local facingDirection = CFrame.new(Vector3.new(), moveDirection)
+			bodyGyro.CFrame = facingDirection
+		else
+			bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+		end
+	end
+	
+	runService.RenderStepped:Connect(updateFlyDirection)
+end
+task.spawn(SCRIPT_7)
+-- // StarterGui.Script Hub.Frame.MainTab.Dex.DexOpen \\ --
+local function SCRIPT_a()
+local script = UI["a"]
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+	end)
+end
+task.spawn(SCRIPT_a)
+-- // StarterGui.Script Hub.Frame.MainTab.ID Board.ID Board TP \\ --
+local function SCRIPT_c()
+local script = UI["c"]
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-455.363403, 3.19999933, -122.063095)
+	end)
+	
+end
+task.spawn(SCRIPT_c)
+-- // StarterGui.Script Hub.Frame.MainTab.F3X.F3X TP \\ --
+local function SCRIPT_e()
+local script = UI["e"]
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12.2729969, 3.19999933, -115.604073)
+	end)
+end
+task.spawn(SCRIPT_e)
+-- // StarterGui.Script Hub.Frame.MainTab.Loadout Board.Loadout Board TP \\ --
+local function SCRIPT_11()
+local script = UI["11"]
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54.3583221, 3.19999933, -121.389183)
+	end)
+end
+task.spawn(SCRIPT_11)
+-- // StarterGui.Script Hub.Frame.MainTab.16.16Speed \\ --
+local function SCRIPT_14()
+local script = UI["14"]
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		end)
+end
+task.spawn(SCRIPT_14)
+-- // StarterGui.Script Hub.Frame.MainTab.30.30Speed \\ --
+local function SCRIPT_16()
+local script = UI["16"]
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+		end)
+end
+task.spawn(SCRIPT_16)
+-- // StarterGui.Script Hub.Frame.MainTab.300.300Speed \\ --
+local function SCRIPT_18()
+local script = UI["18"]
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300
+		end)
+end
+task.spawn(SCRIPT_18)
+-- // StarterGui.Script Hub.Frame.MainTab.60.60Speed \\ --
+local function SCRIPT_1a()
+local script = UI["1a"]
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
+		end)
+end
+task.spawn(SCRIPT_1a)
+-- // StarterGui.Script Hub.Frame.MainTab.100.100Speed \\ --
+local function SCRIPT_1c()
+local script = UI["1c"]
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+		end)
+end
+task.spawn(SCRIPT_1c)
+-- // StarterGui.Script Hub.Frame.MainTab.Building Tools.Building Tools TP \\ --
+local function SCRIPT_1e()
+local script = UI["1e"]
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(30.0670738, 3.19999933, -60.4786224)
+	end)
+end
+task.spawn(SCRIPT_1e)
+-- // StarterGui.Script Hub.Frame.MainTab.Event Spy.SpyOpen \\ --
+local function SCRIPT_20()
+local script = UI["20"]
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/Forked/M%3ASimpleSpy%20V3",true))()
+	end)
+end
+task.spawn(SCRIPT_20)
+-- // StarterGui.Script Hub.Frame.DragScript \\ --
+local function SCRIPT_21()
+local script = UI["21"]
+	local UserInputService = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	local leadFrame = Instance.new('Frame') do
+		leadFrame.AnchorPoint = frame.AnchorPoint
+		leadFrame.Position = frame.Position
+		leadFrame.Size = frame.Size
+		leadFrame.Name = `Lead {frame.Name}`
+		leadFrame.Visible = false
+		leadFrame.Parent = frame.Parent
+	end
+	
+	local screenGui = frame:FindFirstAncestorOfClass('ScreenGui')
+	
+	local inputChanged = nil
+	local inputEnded = nil
+	
+	local function getBoundsRelations(guiObject : GuiObject)
+		local bounds = screenGui.AbsoluteSize
+		local topLeft = screenGui.IgnoreGuiInset and guiObject.AbsolutePosition + Vector2.new(0, 36) or guiObject.AbsolutePosition
+		local bottomRight = topLeft + guiObject.AbsoluteSize
+	
+		local boundRelations = {
+			Top = topLeft.Y < 0 and math.abs(topLeft.Y) or nil,
+			Left = topLeft.X < 0 and math.abs(topLeft.X) or nil,
+			Right = bottomRight.X > bounds.X and math.abs(bottomRight.X - bounds.X) or nil,
+			Bottom = bottomRight.Y > bounds.Y and math.abs(bottomRight.Y - bounds.Y) or nil,
+		}
+	
+		return (not boundRelations.Top
+			and not boundRelations.Bottom
+			and not boundRelations.Left
+			and not boundRelations.Right), boundRelations
+	end
+	
+	frame.InputBegan:Connect(function(inputObject : InputObject)
+		if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+	
+			local lastMousePosition = UserInputService:GetMouseLocation()
+			local goalPosition = frame.Position
+	
+			inputChanged = UserInputService.InputChanged:Connect(function(input : InputObject, event : boolean)
+				if input.UserInputType == Enum.UserInputType.MouseMovement then
+					local currentMousePosition = UserInputService:GetMouseLocation()
+					local mouseDelta = currentMousePosition - lastMousePosition
+	
+					goalPosition += UDim2.fromOffset(mouseDelta.X, mouseDelta.Y)
+	
+					leadFrame.Position = goalPosition
+	
+					local isInBounds, relations = getBoundsRelations(leadFrame)
+	
+					if not isInBounds then
+						local x = (relations.Left or 0) - (relations.Right or 0)
+						local y = (relations.Top or 0) - (relations.Bottom or 0)
+	
+						goalPosition += UDim2.fromOffset(x, y)
+					end
+	
+					frame.Position = goalPosition
+					lastMousePosition = currentMousePosition
+				end
+			end)
+	
+			inputEnded = frame.InputEnded:Connect(function(input : InputObject)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					inputChanged:Disconnect()
+					inputChanged = nil
+	
+					inputEnded:Disconnect()
+					inputEnded = nil
+				end
+			end)
+		end
+	end)
+	
+	frame.Destroying:Once(function()
+	
+		leadFrame = leadFrame:Destroy()
+	
+		if inputChanged  then
+			inputChanged:Disconnect()
+			inputChanged = nil
+		end
+	
+		if inputEnded then
+			inputEnded:Disconnect()
+			inputEnded = nil
+		end
+	end)
+end
+task.spawn(SCRIPT_21)
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.DestroyButton.DemoOpen \\ --
+local function SCRIPT_29()
+local script = UI["29"]
+	local Main = script.parent.parent.parent.parent.MainTab
+	local Kick = script.parent.parent.parent.parent.KickTab
+	local Demo = script.parent.parent.parent.parent.DemoTab
+	local Log = script.parent.parent.parent.parent.LogTab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Kick.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Demo.Visible = true
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Log.Visible = false
+	end)
+	
+	
+end
+task.spawn(SCRIPT_29)
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.KickButton.KickOpen \\ --
+local function SCRIPT_2b()
+local script = UI["2b"]
+	local Main = script.parent.parent.parent.parent.MainTab
+	local Kick = script.parent.parent.parent.parent.KickTab
+	local Demo = script.parent.parent.parent.parent.DemoTab
+	local Log = script.parent.parent.parent.parent.LogTab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Kick.Visible = true
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Demo.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Log.Visible = false
+	end)
+	
+end
+task.spawn(SCRIPT_2b)
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.MainButton.MainOpen \\ --
+local function SCRIPT_2d()
+local script = UI["2d"]
+	local Main = script.parent.parent.parent.parent.MainTab
+	local Kick = script.parent.parent.parent.parent.KickTab
+	local Demo = script.parent.parent.parent.parent.DemoTab
+	local Log = script.parent.parent.parent.parent.LogTab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = true
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Kick.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Demo.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Log.Visible = false
+	end)
+	
+end
+task.spawn(SCRIPT_2d)
+-- // StarterGui.Script Hub.Frame.Tab Icons.Tabs.LogButton.LogOpen \\ --
+local function SCRIPT_2f()
+local script = UI["2f"]
+	local Main = script.parent.parent.parent.parent.MainTab
+	local Kick = script.parent.parent.parent.parent.KickTab
+	local Demo = script.parent.parent.parent.parent.DemoTab
+	local Log = script.parent.parent.parent.parent.LogTab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Main.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Kick.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Demo.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Log.Visible = true
+	end)
+	
+end
+task.spawn(SCRIPT_2f)
+-- // StarterGui.Script Hub.Welcome Script \\ --
+local function SCRIPT_36()
+local script = UI["36"]
+	game.StarterGui:SetCore("SendNotification", {Title="Welcome"; Text="Script Hub Acticated!"; Duration=8;})
+	
+	game.StarterGui:SetCore("SendNotification", {Title="Credits "; Text=" GUI by lpi_burnplzok!"; Duration=8;})
+	
+end
+task.spawn(SCRIPT_36)
+-- // StarterGui.Script Hub.TextButton.Open and Close \\ --
+local function SCRIPT_38()
+local script = UI["38"]
+	-- References to the GUI elements
+	local screenGui = script.Parent.Parent
+	local mainGui = screenGui:WaitForChild("Frame")
+	local toggleButton = script.Parent
+	
+	-- Function to update the button text based on the main GUI visibility
+	local function updateButtonText()
+		if mainGui.Visible then
+			toggleButton.Text = "CLOSE"
+		else
+			toggleButton.Text = "OPEN"
+		end
+	end
+	
+	-- Function to toggle the visibility of the main GUI
+	local function toggleVisibility()
+		mainGui.Visible = not mainGui.Visible
+		updateButtonText()
+	end
+	
+	-- Initial setup
+	updateButtonText()
+	
+	-- Connect the function to the button's click event
+	toggleButton.MouseButton1Click:Connect(toggleVisibility)
+	
+end
+task.spawn(SCRIPT_38)
+
+return UI["1"], require;
